@@ -1,0 +1,7 @@
+---
+- hosts: all
+
+  tasks:
+  - name: Debug OS
+    ansible.builtin.debug:
+      msg: "{{ ansible_distribution }}"
