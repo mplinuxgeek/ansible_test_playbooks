@@ -9,4 +9,4 @@
         - "{{ ansible_distribution_version }}"
         - "{{ ansible_os_family }}"
         - "{{ ansible_product_name }}"
-        - "{{ ansible_uptime_seconds / 86400 | round }}"
+        - "{{ ansible_uptime_seconds / 86400 | round(1) }}"
