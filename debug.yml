@@ -2,6 +2,11 @@
 - hosts: all
 
   tasks:
-  - name: Debug OS
-    ansible.builtin.debug:
-      msg: "{{ ansible_distribution }}"
+  - name: Debug OS Version
+    debug:
+      msg:
+        - "{{ ansible_hostname }}"
+        - "{{ ansible_distribution_version }}"
+        - "{{ ansible_os_family }}"
+        - "{{ ansible_product_name }}"
+        - "{{ ansible_uptime_seconds / 86400 | round }}"
